@@ -1,0 +1,226 @@
+/* Base */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+
+/* Reveal on scroll */
+
+
+/* الحاوية ثابتة بأسفل الصفحة */
+
+#scroll-progress {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* أسفل الصفحة */
+    height: 6px;
+    /* سماكة الشريط */
+    background: rgba(22, 163, 74, 0.15);
+    /* خلفية خفيفة خضراء (#16A34A) */
+    z-index: 9999;
+    /* فوق كل العناصر */
+    pointer-events: none;
+    /* لا يمنع النقر على عناصر الصفحة */
+}
+
+
+/* شريط التقدم نفسه */
+
+#scroll-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #16A34A;
+    /* أخضر */
+    transition: width 0.08s linear;
+}
+
+
+/* دعم أنظمة تفضيل تقليل الحركة */
+
+@media (prefers-reduced-motion: reduce) {
+    #scroll-progress-bar {
+        transition: none;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .6s ease, transform .6s ease
+}
+
+.reveal.on {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+
+/* CTA subtle glow */
+
+.glow {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, .35);
+    animation: pulseGlow 2.2s infinite
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(22, 163, 74, .35)
+    }
+    70% {
+        box-shadow: 0 0 0 18px rgba(22, 163, 74, 0)
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(22, 163, 74, 0)
+    }
+}
+
+
+/* Partners marquee */
+
+.marquee {
+    --gap: 3rem;
+    display: flex;
+    gap: var(--gap);
+    overflow: hidden;
+    user-select: none
+}
+
+.marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    animation: scroll 24s linear infinite
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - var(--gap)))
+    }
+}
+
+
+/* Hero visual accents (subtle version) */
+
+.hero-blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(18px);
+    opacity: .35;
+    pointer-events: none
+}
+
+.hero-blob.blob-1 {
+    width: 380px;
+    height: 380px;
+    right: -120px;
+    top: -80px;
+    background: radial-gradient(circle at 30% 30%, #34D399, #10B981 60%, transparent 65%);
+    animation: float1 10s ease-in-out infinite
+}
+
+.hero-blob.blob-2 {
+    width: 320px;
+    height: 320px;
+    left: -90px;
+    bottom: -60px;
+    background: radial-gradient(circle at 70% 70%, #A7F3D0, #34D399 55%, transparent 65%);
+    animation: float2 12s ease-in-out infinite
+}
+
+#heroTitle {
+    line-height: 1.4;
+    letter-spacing: 0;
+    word-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant-ligatures: contextual;
+    font-feature-settings: "calt" 1, "kern" 1;
+}
+
+
+/* Slider layout fix */
+
+
+/* ===== HARD FIX: صفّ الشرائح على سطر واحد مهما حصل ===== */
+
+#slider {
+    white-space: nowrap;
+    /* يمنع اللف */
+    font-size: 0;
+    /* يقتل فراغات inline-block */
+    transition: transform 500ms ease;
+    will-change: transform;
+}
+
+#slider>figure {
+    display: inline-block;
+    /* كل شريحة صندوق على السطر */
+    vertical-align: top;
+    width: 100%;
+    /* سنثبّت عرضها بالبكسل أيضاً */
+    margin: 0;
+    box-sizing: border-box;
+    font-size: initial;
+    /* يرجّع حجم خط داخل الشريحة لطبيعته */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #heroTitle span {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+
+@keyframes float1 {
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(16px)
+    }
+}
+
+@keyframes float2 {
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-14px)
+    }
+}
+
+.float-slow {
+    animation: float3 9s ease-in-out infinite
+}
+
+@keyframes float3 {
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-10px)
+    }
+}
+
+.parallax-item {
+    transition: transform .15s ease-out
+}
+
+
+/* Prevent anchor target from hiding behind sticky header */
+
+[id] {
+    scroll-margin-top: 90px;
+}

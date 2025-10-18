@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title> تاجر إكس</title>
+    <meta content="نمو متجرك الإلكتروني بمنهجية متكاملة: استراتيجية، إعلانات، محتوى، إدارة متجر، وتحسين مستمر." name="description" />
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#16A34A',
+                        primaryDark: '#15803D',
+                        base: '#0F172A',
+                        muted: '#64748B',
+                        soft: '#F8FAFC'
+                    },
+                    boxShadow: {
+                        soft: '0 10px 30px rgba(2,6,23,0.06)'
+                    },
+                    container: {
+                        center: true,
+                        padding: '1rem'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+</head>
+
+<body class="bg-white text-base text-slate-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200">
+        <div class="container max-w-7xl flex items-center justify-between py-6">
+            <a class="flex items-center gap-2" href="#">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white font-bold">T</span>
+                <span class="font-extrabold text-lg">تاجر إكس</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+                <a class="hover:text-primary" href="#system">منظومة التكامل</a>
+                <a class="hover:text-primary" href="#services">الخدمات</a>
+                <a class="hover:text-primary" href="#results">النتائج</a>
+                <a class="hover:text-primary" href="#cases">قصص نجاح</a>
+                <!-- <a class="hover:text-primary" href="#blog">المدونة</a> -->
+            </nav>
+            <div class="flex items-center gap-2">
+                <a class="hidden sm:inline-flex rounded-xl bg-primary px-4 py-2 text-white hover:bg-primaryDark transition glow" href="#contact">استشارة مجانية</a>
+                <button aria-controls="mobileMenu" aria-expanded="false" aria-label="فتح القائمة" class="md:hidden inline-flex items-center justify-center rounded-lg border px-3 py-2" id="menuBtn">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden border-t border-slate-200 bg-white" id="mobileMenu">
+            <div class="container max-w-7xl py-3 flex flex-col gap-3 text-slate-700">
+                <a href="#system">منظومة التكامل</a>
+                <a href="#services">الخدمات</a>
+                <a href="#results">النتائج</a>
+                <a href="#cases">قصص نجاح</a>
+                <a href="#blog">المدونة</a>
+                <a class="rounded-lg bg-primary px-4 py-2 text-white text-center" href="#contact">استشارة مجانية</a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-emerald-50 to-white"></div>
+        <div class="hero-blob blob-1"></div>
+        <!-- <div class="hero-blob blob-2"></div> -->
+        <div class="container max-w-7xl py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h1 id="heroTitle" class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
+                    ننمّي متجرك الإلكتروني بمنهجيّة متكاملة خلال 90 يوماً
+                </h1>
+
+
+
+                <p class="mt-4 text-lg text-slate-600 max-w-prose">
+                    استراتيجية دقيقة، حملات مدفوعة ذكية، محتوى مُقنع، وإدارة متجر تُركز على التحويل. كل ما تحتاجه لتنتقل من محاولات متفرقة إلى نمو مُستدام.
+                </p>
+                <div class="mt-8 flex flex-wrap items-center gap-3">
+                    <a class="rounded-xl bg-primary px-6 py-3 text-white font-semibold shadow-soft hover:-translate-y-0.5 hover:shadow transition" href="#contact" id="primaryCta">اطلب استشارة مجانية</a>
+                    <a class="rounded-xl border px-6 py-3 text-slate-700 hover:bg-slate-50 transition" href="#results">اطّلع على النتائج</a>
+                </div>
+                <div class="mt-8 flex items-center gap-5 text-sm text-slate-500">
+                    <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-500"></span> زيادة مبيعات مثبتة</div>
+                    <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-blue-500"></span> شراكة بأهداف مشتركة</div>
+                </div>
+            </div>
+            <div class="relative" id="heroVisual">
+                <div class="reveal rounded-2xl border bg-white p-6 shadow-soft parallax-item float-slow" data-depth="12">
+                    <div class="text-sm text-slate-500">لوحة نتائج مباشرة</div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div class="rounded-xl bg-soft p-4">
+                            <div class="text-xs text-slate-500">ROAS</div>
+                            <div class="mt-1 text-2xl font-extrabold" id="kpi1">×8.4</div>
+                            <p class="text-xs text-slate-500 mt-1">متجر أدوات منزلية</p>
+                        </div>
+                        <div class="rounded-xl bg-soft p-4">
+                            <div class="text-xs text-slate-500">تحويل</div>
+                            <div class="mt-1 text-2xl font-extrabold" id="kpi2">+27%</div>
+                            <p class="text-xs text-slate-500 mt-1">منتج رقمي</p>
+                        </div>
+                        <div class="rounded-xl bg-soft p-4">
+                            <div class="text-xs text-slate-500">مبيعات 60 يوم</div>
+                            <div class="mt-1 text-2xl font-extrabold" id="kpi3">+230%</div>
+                            <p class="text-xs text-slate-500 mt-1">متجر موضة</p>
+                        </div>
+                        <div class="rounded-xl bg-soft p-4">
+                            <div class="text-xs text-slate-500">CAC</div>
+                            <div class="mt-1 text-2xl font-extrabold" id="kpi4">-18%</div>
+                            <p class="text-xs text-slate-500 mt-1">خلال 45 يومًا</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal mt-6 rounded-2xl border bg-white p-4 shadow-soft flex items-center gap-4 parallax-item" data-depth="6">
+                    <img alt="avatar" class="h-12 w-12 rounded-full object-cover" src="https://picsum.photos/seed/faceA/64/64" />
+                    <div class="text-sm">
+                        <p class="font-semibold">محمد – متجر عطور</p>
+                        <p class="text-slate-600">"انضبط الصرف الإعلاني وشاهدنا نمواً حقيقياً خلال شهرين"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Partners Marquee -->
+        <div class="py-8 border-t border-slate-200 bg-white/60">
+            <div class="container max-w-7xl">
+                <div aria-label="شركاؤنا" class="marquee">
+                    <div class="marquee__group">
+                        <img alt="Salla" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Salla">
+                        <img alt="Zid" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Zid" />
+                        <img alt="Shopify" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Shopify" />
+                        <img alt="WooCommerce" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Woo" />
+                        <img alt="Google Ads" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Google+Ads" />
+                        <img alt="Meta" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Meta" />
+                        <img alt="Snapchat" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Snap" />
+                        <img alt="TikTok" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=TikTok" />
+                        </img>
+                    </div>
+                    <div aria-hidden="true" class="marquee__group">
+                        <img alt="" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Salla" />
+                        <img alt="" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Zid" />
+                        <img alt="" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Shopify" />
+                        <img alt="" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Woo" />
+                        <img alt="" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Google+Ads" />
+                        <img alt="" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Meta" />
+                        <img alt="" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=Snap" />
+                        <img alt="" class="opacity-70" src="https://dummyimage.com/120x36/eee/111.png&amp;text=TikTok" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- System / Process -->
+    <section class="py-16 md:py-24" id="system">
+        <div class="container max-w-7xl">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold">منظومة التكامل: 3 خطوات للانطلاق</h2>
+                <p class="mt-3 text-slate-600">نمذجة العرض الرابح، إدارة مركزية للتسويق، وبناء على المكتسبات أسبوعيًا.</p>
+            </div>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="reveal rounded-2xl border p-6 shadow-soft hover:-translate-y-1 transition">
+                    <div class="h-10 w-10 rounded-lg bg-emerald-100 text-primary flex items-center justify-center">1</div>
+                    <h3 class="mt-4 font-bold text-xl">دراسة المتجر والمنتجات</h3>
+                    <p class="mt-2 text-slate-600">تحليل السوق، العملاء، الأسعار، وحدات الربح؛ والخروج بخريطة تحويل واضحة.</p>
+                    <ul class="mt-3 space-y-1 text-sm text-slate-600 list-disc list-inside">
+                        <li>تحديد ICP &amp; USP</li>
+                        <li>تجهيز صفحات الهبوط</li>
+                        <li>خطة محتوى 4 أسابيع</li>
+                    </ul>
+                </div>
+                <!-- Card 2 -->
+                <div class="reveal rounded-2xl border p-6 shadow-soft hover:-translate-y-1 transition">
+                    <div class="h-10 w-10 rounded-lg bg-emerald-100 text-primary flex items-center justify-center">2</div>
+                    <h3 class="mt-4 font-bold text-xl">إدارة مركزية للتسويق</h3>
+                    <p class="mt-2 text-slate-600">تشغيل الإعلانات، إنتاج المحتوى، البريد، وإعادة الاستهداف مع تتبع كامل للأحداث.</p>
+                    <ul class="mt-3 space-y-1 text-sm text-slate-600 list-disc list-inside">
+                        <li>Google / Meta / TikTok</li>
+                        <li>تحسين الصفحات والتحويل CRO</li>
+                        <li>تقارير أسبوعية ذكية</li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="reveal rounded-2xl border p-6 shadow-soft hover:-translate-y-1 transition">
+                    <div class="h-10 w-10 rounded-lg bg-emerald-100 text-primary flex items-center justify-center">3</div>
+                    <h3 class="mt-4 font-bold text-xl">البناء على المكتسبات</h3>
+                    <p class="mt-2 text-slate-600">اختبارات A/B، ضبط الميزانيات، وتوسيع العروض الرابحة على القنوات الأكثر ربحًا.</p>
+                    <ul class="mt-3 space-y-1 text-sm text-slate-600 list-disc list-inside">
+                        <li>Scaling تدريجي آمن</li>
+                        <li>خفض CAC ورفع LTV</li>
+                        <li>خريطة ربع سنوية للنمو</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services -->
+    <section class="py-16 md:py-24 bg-soft" id="services">
+        <div class="container max-w-7xl">
+            <div class="flex items-end justify-between flex-wrap gap-4">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold">خدمات تاجر إكس</h2>
+                    <p class="mt-2 text-slate-600">نعمل كفريق نمو واحد لتحقيق نتائج مرضية.</p>
+                </div>
+                <a class="rounded-xl border px-4 py-2" href="#contact">اطلب توصية خدمة</a>
+            </div>
+            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item -->
+                <article class="reveal rounded-2xl border bg-white p-6 shadow-soft">
+                    <div class="text-xs uppercase tracking-wide text-primary">ADS</div>
+                    <h3 class="mt-2 font-bold text-xl">إدارة الحملات المدفوعة</h3>
+                    <p class="mt-1 text-slate-600">بحث، شبكات اجتماعية، فيديو، شوبر؛ بإدارة ميزانية مرنة ترتبط بالأداء.</p>
+                    <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+                        <li>Google / Meta / TikTok / Snap</li>
+                        <li>تهيئة أحداث التحويل</li>
+                        <li>تقارير ROAS وCAC</li>
+                    </ul>
+                </article>
+                <article class="reveal rounded-2xl border bg-white p-6 shadow-soft">
+                    <div class="text-xs uppercase tracking-wide text-primary">CONTENT</div>
+                    <h3 class="mt-2 font-bold text-xl">إنتاج المحتوى الإعلاني</h3>
+                    <p class="mt-1 text-slate-600">سكربتات قصيرة، UGC، صور منتجات، ولاندينغ كابي مُقنع.</p>
+                    <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+                        <li>تصوير ومنتاج سريع</li>
+                        <li>Copywriting موجّه للتحويل</li>
+                        <li>حقيبة أصول شهرية</li>
+                    </ul>
+                </article>
+                <article class="reveal rounded-2xl border bg-white p-6 shadow-soft">
+                    <div class="text-xs uppercase tracking-wide text-primary">STORE</div>
+                    <h3 class="mt-2 font-bold text-xl">إدارة المتاجر الإلكترونية</h3>
+                    <p class="mt-1 text-slate-600">تجهيز، تكامل المدفوعات، إدارة مخزون وتذاكر دعم العملاء.</p>
+                    <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+                        <li>Shopify / Woo / Salla / Zid</li>
+                        <li>CRO &amp; صفحات هبوط</li>
+                        <li>أتمتة البريد وإعادة الاستهداف</li>
+                    </ul>
+                </article>
+                <article class="reveal rounded-2xl border bg-white p-6 shadow-soft">
+                    <div class="text-xs uppercase tracking-wide text-primary">SEO</div>
+                    <h3 class="mt-2 font-bold text-xl">تحسين محركات البحث</h3>
+                    <p class="mt-1 text-slate-600">فني + محتوى + باك لينكس بجدول شهري واضح.</p>
+                    <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+                        <li>تدقيق تقني</li>
+                        <li>ركائز محتوى</li>
+                        <li>تحسين سرعة وحِزمة Core Web Vitals</li>
+                    </ul>
+                </article>
+                <article class="reveal rounded-2xl border bg-white p-6 shadow-soft">
+                    <div class="text-xs uppercase tracking-wide text-primary">BRAND</div>
+                    <h3 class="mt-2 font-bold text-xl">تصميم وهوية</h3>
+                    <p class="mt-1 text-slate-600">نظام بصري متسق، مكتبة مكونات UI، وأدلة استخدام.</p>
+                    <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+                        <li>لوغو وخطوط وألوان</li>
+                        <li>Kit واجهات وتسليم Figma</li>
+                        <li>قوالب سوشيال وتعبئة محتوى</li>
+                    </ul>
+                </article>
+                <article class="reveal rounded-2xl border bg-white p-6 shadow-soft">
+                    <div class="text-xs uppercase tracking-wide text-primary">ANALYTICS</div>
+                    <h3 class="mt-2 font-bold text-xl">تحليلات وقياس</h3>
+                    <p class="mt-1 text-slate-600">GA4، بيكسلات، ولوحات Hub تُظهر ما يهم.</p>
+                    <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+                        <li>لوحات أسبوعية</li>
+                        <li>Attribution متعدد القنوات</li>
+                        <li>تنبيهات هامش الربح</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Results / Numbers -->
+    <section class="py-16 md:py-24" id="results">
+        <div class="container max-w-7xl">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold">نتائج نفتخر بها</h2>
+                <p class="mt-2 text-slate-600">نقيس كل شيء ونشارك الأثر بوضوح.</p>
+            </div>
+            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="reveal rounded-2xl border p-6 text-center shadow-soft">
+                    <div class="text-4xl font-extrabold text-primary">×12.1</div>
+                    <p class="mt-1 text-slate-600">ROAS موسم العيد – عطور</p>
+                </div>
+                <div class="reveal rounded-2xl border p-6 text-center shadow-soft">
+                    <div class="text-4xl font-extrabold text-primary">+540%</div>
+                    <p class="mt-1 text-slate-600">نمو مبيعات 3 أشهر – موضة</p>
+                </div>
+                <div class="reveal rounded-2xl border p-6 text-center shadow-soft">
+                    <div class="text-4xl font-extrabold text-primary">-31%</div>
+                    <p class="mt-1 text-slate-600">انخفاض CAC خلال 8 أسابيع</p>
+                </div>
+                <div class="reveal rounded-2xl border p-6 text-center shadow-soft">
+                    <div class="text-4xl font-extrabold text-primary">+2.4x</div>
+                    <p class="mt-1 text-slate-600">متوسط LTV بعد 6 أشهر</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- For Whom -->
+    <section class="py-16 md:py-24 bg-soft">
+        <div class="container max-w-7xl">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold">لمن صُمّم هذا البرنامج؟</h2>
+                    <ul class="mt-6 space-y-3 text-slate-700">
+                        <li class="flex gap-3"><span class="text-primary">•</span> متاجر تبحث عن نمو سريع ومدروس.</li>
+                        <li class="flex gap-3"><span class="text-primary">•</span> من يعاني تذبذب المبيعات ويريد وضوحًا في التقارير.</li>
+                        <li class="flex gap-3"><span class="text-primary">•</span> من يفضّل شراكة طويلة الأمد بأهداف مشتركة.</li>
+                        <li class="flex gap-3"><span class="text-primary">•</span> من يريد تجميع الخدمات تحت إدارة واحدة.</li>
+                    </ul>
+                    <a class="mt-6 inline-flex rounded-xl bg-primary px-5 py-3 text-white" href="#contact">ابدأ بخطة الـ 90 يومًا</a>
+                </div>
+                <div class="reveal rounded-2xl border bg-white p-6 shadow-soft">
+                    <img alt="ecommerce dashboard" class="w-full rounded-xl object-cover" src="https://picsum.photos/seed/ecom1/960/600" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cases / Testimonials -->
+    <section class="py-16 md:py-24" id="cases">
+        <div class="container max-w-7xl">
+            <div class="flex items-end justify-between flex-wrap gap-4">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold">قصص نجاح مختارة</h2>
+                    <p class="mt-2 text-slate-600">مختصر قابل للقياس لكل حالة.</p>
+                </div>
+                <a class="rounded-xl border px-4 py-2" href="#contact">أريد مثل هذه النتائج</a>
+            </div>
+            <div class="mt-8 grid md:grid-cols-3 gap-6">
+                <!-- Case card -->
+                <article class="reveal rounded-2xl border overflow-hidden bg-white shadow-soft">
+                    <img alt="case" class="h-40 w-full object-cover" src="https://picsum.photos/seed/c1/960/600" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">عطور – حملة موسم العيد</h3>
+                        <p class="mt-2 text-slate-600">ROAS ×12.1 و +160% تكرار شراء خلال 60 يومًا.</p>
+                        <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
+                            <li>UGC + إعلانات فيديو قصيرة</li>
+                            <li>Landing محسّنة بالبرهان الاجتماعي</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="reveal rounded-2xl border overflow-hidden bg-white shadow-soft">
+                    <img alt="case" class="h-40 w-full object-cover" src="https://picsum.photos/seed/c2/960/600" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">موضة – إطلاق تشكيلة</h3>
+                        <p class="mt-2 text-slate-600">+230% مبيعات و -24% CAC خلال 8 أسابيع.</p>
+                        <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
+                            <li>SEO صفحات التصنيفات</li>
+                            <li>إعادة استهداف ديناميكي</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="reveal rounded-2xl border overflow-hidden bg-white shadow-soft">
+                    <img alt="case" class="h-40 w-full object-cover" src="https://picsum.photos/seed/c3/960/600" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">إلكترونيات – تحسين التحويل</h3>
+                        <p class="mt-2 text-slate-600">+28% معدل التحويل عبر اختبارات A/B.</p>
+                        <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
+                            <li>تبسيط خطوات الدفع</li>
+                            <li>نسخ تسويقي موجّه</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+            <!-- Testimonials slider (simple) -->
+            <div class="mt-12">
+                <div id="sliderWrap" class="overflow-hidden rounded-2xl border bg-white shadow-soft">
+                    <div id="slider" class="flex will-change-transform transition-transform duration-500 ease-out">
+                        <!-- Slide 1 -->
+                        <figure class="w-full flex-none p-6 flex items-center gap-4">
+                            <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceB/80/80" />
+                            <blockquote class="text-slate-700">
+                                <p class="text-lg">"أفضل ما حصل هو وضوح الأرقام. لأول مرة نفهم أين نهدر الميزانية وكيف نضاعف الرابح."</p>
+                                <figcaption class="mt-2 text-sm text-slate-500">سارة – متجر مستلزمات منزلية</figcaption>
+                            </blockquote>
+                        </figure>
+
+                        <!-- Slide 2 -->
+                        <figure class="w-full flex-none p-6 flex items-center gap-4">
+                            <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceC/80/80" />
+                            <blockquote class="text-slate-700">
+                                <p class="text-lg">"الشغل صار منظم: محتوى، إعلانات، وتقارير أسبوعية واضحة. شفنا نمو ثابت بدون مفاجآت."</p>
+                                <figcaption class="mt-2 text-sm text-slate-500">عبدالله – متجر إلكترونيات</figcaption>
+                            </blockquote>
+                        </figure>
+
+                        <!-- Slide 3 -->
+                        <figure class="w-full flex-none p-6 flex items-center gap-4">
+                            <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceD/80/80" />
+                            <blockquote class="text-slate-700">
+                                <p class="text-lg">"خطة 90 يوم خلت التنفيذ سهل والنتائج قابلة للقياس. CAC نزل وLTV ارتفع."</p>
+                                <figcaption class="mt-2 text-sm text-slate-500">ريم – متجر أزياء</figcaption>
+                            </blockquote>
+                        </figure>
+                    </div>
+
+                    <!-- Dots -->
+                    <div class="flex items-center justify-center gap-3 p-4">
+                        <button class="dot h-2 w-6 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="1" aria-current="true"></button>
+                        <button class="dot h-2 w-2 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="2"></button>
+                        <button class="dot h-2 w-2 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="3"></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Blog -->
+    <section class="py-16 md:py-24 bg-soft" id="blog">
+        <div class="container max-w-7xl">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold">من المدونة</h2>
+                <p class="mt-2 text-slate-600">معرفة قابلة للتطبيق من قلب التجارة الإلكترونية.</p>
+            </div>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <article class="reveal rounded-2xl border bg-white overflow-hidden shadow-soft">
+                    <img alt="blog" class="h-44 w-full object-cover" src="https://picsum.photos/seed/b1/960/600" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">كيف تصنع عرضًا رابحًا يزيد التحويل؟</h3>
+                        <p class="mt-2 text-slate-600">عناصر العرض، الضمان، الندرة، وأين تضع البرهان الاجتماعي.</p>
+                        <a class="mt-3 inline-flex text-primary" href="#">اقرأ المزيد</a>
+                    </div>
+                </article>
+                <article class="reveal rounded-2xl border bg-white overflow-hidden shadow-soft">
+                    <img alt="blog" class="h-44 w-full object-cover" src="https://picsum.photos/seed/b2/960/600" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">ضبط الأحداث في GA4 للتجار</h3>
+                        <p class="mt-2 text-slate-600">من add_to_cart حتى purchase – كيف تتأكد أن كل شيء يُسجّل؟</p>
+                        <a class="mt-3 inline-flex text-primary" href="#">اقرأ المزيد</a>
+                    </div>
+                </article>
+                <article class="reveal rounded-2xl border bg-white overflow-hidden shadow-soft">
+                    <img alt="blog" class="h-44 w-full object-cover" src="https://picsum.photos/seed/b3/960/600" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Scaling بلا هدر: متى ولماذا؟</h3>
+                        <p class="mt-2 text-slate-600">إشارات النضج، أوزان القنوات، ونِسَب التكرار المقبولة.</p>
+                        <a class="mt-3 inline-flex text-primary" href="#">اقرأ المزيد</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Contact / CTA -->
+    <section class="py-16 md:py-24" id="contact">
+        <div class="container max-w-5xl">
+            <div class="grid lg:grid-cols-2 gap-10 items-start">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-extrabold">جاهز نضع خطتك للـ 90 يوم القادمة؟</h2>
+                    <p class="mt-2 text-slate-600">املأ النموذج وسنتواصل خلال 24 ساعة عمل. أو اكتب لنا مباشرة على واتساب.</p>
+                    <a class="mt-4 inline-flex items-center gap-2 rounded-xl border px-4 py-2" href="https://wa.me/000000000000" target="_blank">
+                        <img alt="whatsapp" class="h-5 w-5" src="https://dummyimage.com/20x20/25D366/ffffff.png&amp;text=W" /> تواصل واتساب الآن
+                    </a>
+                    <div class="mt-6 rounded-2xl border p-4 bg-soft">
+                        <p class="text-sm text-slate-600">سياسة الخصوصية: لا نشارك بياناتك مع أي طرف. سنستخدمها فقط للتواصل حول استشارتك.</p>
+                    </div>
+                </div>
+                <form class="reveal rounded-2xl border p-6 shadow-soft bg-white space-y-4" onsubmit="event.preventDefault(); alert('تم إرسال الطلب – سنعود إليك خلال 24 ساعة عمل.'); this.reset();">
+                    <div>
+                        <label class="text-sm text-slate-600">الاسم الكامل</label>
+                        <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="مثال: محمد محمد" required="" type="text" />
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-sm text-slate-600">البريد الإلكتروني</label>
+                            <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="you@example.com" required="" type="email" />
+                        </div>
+                        <div>
+                            <label class="text-sm text-slate-600">رقم الجوال</label>
+                            <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="05xxxxxxxx" required="" type="tel" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-sm text-slate-600">رابط متجرك (اختياري)</label>
+                        <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="https://yourstore.com" type="url" />
+                    </div>
+                    <div>
+                        <label class="text-sm text-slate-600">كيف نستطيع المساعدة؟</label>
+                        <textarea class="mt-1 w-full rounded-xl border-slate-300" placeholder="احكِ لنا بإيجاز عن وضع متجرك الحالي" rows="4"></textarea>
+                    </div>
+                    <button class="w-full rounded-xl bg-primary px-6 py-3 text-white font-semibold hover:bg-primaryDark transition" type="submit">أرسل طلبي</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-10">
+        <div class="container max-w-7xl">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white font-bold">T</span>
+                        <span class="font-extrabold text-lg">TAJJERX</span>
+                    </div>
+                    <p class="mt-3 text-slate-600 text-sm">نحو نمو مُستدام لمتجرك عبر منهجية متكاملة ترتكز على البيانات.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">روابط</h4>
+                    <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+                        <li><a class="hover:text-primary" href="#services">الخدمات</a></li>
+                        <li><a class="hover:text-primary" href="#system">منظومة التكامل</a></li>
+                        <li><a class="hover:text-primary" href="#results">النتائج</a></li>
+                        <li><a class="hover:text-primary" href="#cases">قصص نجاح</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold">قوانين</h4>
+                    <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+                        <li><a class="hover:text-primary" href="#">سياسة الخصوصية</a></li>
+                        <li><a class="hover:text-primary" href="#">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold">النشرة البريدية</h4>
+                    <form class="mt-3 flex gap-2" onsubmit="event.preventDefault(); alert('تم الاشتراك بالنشرة.'); this.reset();">
+                        <input class="flex-1 rounded-xl border-slate-300" placeholder="بريدك الإلكتروني" required="" type="email" />
+                        <button class="rounded-xl bg-primary px-4 py-2 text-white">اشترك</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t text-sm text-slate-500 flex flex-wrap items-center justify-between gap-3">
+                <p>© <span id="year"></span> وكالة نمو المتاجر – كل الحقوق محفوظة.</p>
+                <div class="flex items-center gap-3">
+                    <a aria-label="Twitter" class="hover:text-primary" href="#">تويتر</a>
+                    <a aria-label="LinkedIn" class="hover:text-primary" href="#">لينكدإن</a>
+                    <a aria-label="YouTube" class="hover:text-primary" href="#">يوتيوب</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+
+
+    <!-- START Scroll Progress (Bottom) -->
+    <div id="scroll-progress" aria-label="Scroll progress">
+        <div id="scroll-progress-bar"></div>
+    </div>
+
+    <script>
+        (function() {
+            const bar = document.getElementById('scroll-progress-bar');
+
+            function update() {
+                const doc = document.documentElement;
+                const scrollTop = doc.scrollTop || document.body.scrollTop;
+                const scrollHeight = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+                const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+                bar.style.width = progress + '%';
+            }
+
+            // أداء أفضل عبر requestAnimationFrame
+            let ticking = false;
+            const onScrollOrResize = () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        update();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            };
+
+            window.addEventListener('scroll', onScrollOrResize, {
+                passive: true
+            });
+            window.addEventListener('resize', onScrollOrResize);
+            // تهيئة أولية
+            update();
+        })();
+    </script>
+    <!-- END Scroll Progress (Bottom) -->
+
+
+
+</body>
+
+</html>
