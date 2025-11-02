@@ -50,7 +50,7 @@
                 <a class="hover:text-primary" href="#system">منظومة التكامل</a>
                 <a class="hover:text-primary" href="#services">الخدمات</a>
                 <a class="hover:text-primary" href="#results">النتائج</a>
-                <a class="hover:text-primary" href="#cases">قصص نجاح</a>
+                <!-- <a class="hover:text-primary" href="#cases">قصص نجاح</a> -->
                 <!-- <a class="hover:text-primary" href="#blog">المدونة</a> -->
             </nav>
             <div class="flex items-center gap-2">
@@ -66,8 +66,8 @@
                 <a href="#system">منظومة التكامل</a>
                 <a href="#services">الخدمات</a>
                 <a href="#results">النتائج</a>
-                <a href="#cases">قصص نجاح</a>
-                <a href="#blog">المدونة</a>
+                <!-- <a href="#cases">قصص نجاح</a> -->
+                <!-- <a href="#blog">المدونة</a> -->
                 <a class="rounded-lg bg-primary px-4 py-2 text-white text-center" href="#contact">استشارة مجانية</a>
             </div>
         </div>
@@ -80,7 +80,7 @@
         <div class="container max-w-7xl py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
             <div>
                 <h1 id="heroTitle" class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-                    ننمّي متجرك الإلكتروني بمنهجيّة متكاملة خلال 90 يوماً
+                    ننمي مشروعك التجاري بمنهجيّة متكاملة خلال 90 يوماً
                 </h1>
 
 
@@ -161,6 +161,180 @@
             </div>
         </div>
     </section>
+
+    <!-- new section -->
+    <section id="dashboard-stats" class="max-w-7xl mx-auto px-6 py-16" dir="rtl" lang="ar">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-8">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-emerald-700">لوحة الأداء واللقطات</h2>
+                <p class="text-gray-600 mt-2 max-w-2xl">
+                    نظرة مركزة على أهم مؤشراتنا مع معاينات فعلية من لوحة التحكم — شفافية، سرعة، وقرارات مبنية على بيانات.
+                </p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button id="exportCSV" class="inline-flex items-center gap-2 px-4 py-2 bg-white border rounded-full shadow hover:shadow-md">
+        <svg class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 7l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        تصدير CSV
+      </button>
+                <button id="refreshAll" class="px-4 py-2 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 transition">تحديث العرض</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <div class="lg:col-span-1 grid grid-cols-1 gap-4">
+                <div class="bg-white rounded-2xl p-5 shadow flex items-center gap-4">
+                    <div class="p-3 bg-emerald-50 rounded-lg">
+                        <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm text-gray-500">مجموع المبيعات</div>
+                        <div class="text-2xl font-bold text-emerald-700 js-kpi" data-key="sales">0</div>
+                        <div class="text-xs text-gray-400">إجمالي مبلغ المبيعات</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 shadow flex items-center gap-4">
+                    <div class="p-3 bg-amber-50 rounded-lg">
+                        <svg class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 20l9-5-9-5-9 5 9 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm text-gray-500">عملاء نشطون</div>
+                        <div class="text-2xl font-bold text-amber-700 js-kpi" data-key="active_customers">0</div>
+                        <div class="text-xs text-gray-400">خلال آخر 30 يوم</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 shadow flex items-center gap-4">
+                    <div class="p-3 bg-blue-50 rounded-lg">
+                        <svg class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm text-gray-500">المشروعات المكتملة</div>
+                        <div class="text-2xl font-bold text-blue-700 js-kpi" data-key="completed_projects">0</div>
+                        <div class="text-xs text-gray-400">إجمالي المشاريع</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-white rounded-2xl p-5 shadow">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-700">تحرك الإيرادات</h3>
+                        <p class="text-sm text-gray-400">عرض ثابت لكن متحرك عند التحميل</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <select id="chartRange" class="border rounded px-2 py-1 text-sm">
+            <option value="12">آخر 12 شهر</option>
+            <option value="6">آخر 6 أشهر</option>
+            <option value="3">آخر 3 أشهر</option>
+          </select>
+                        <button id="toggleCurve" class="text-sm px-3 py-1 border rounded">تنعيم الخط</button>
+                    </div>
+                </div>
+                <canvas id="revenueChartNew" height="160" role="img" aria-label="رسم بياني لإيرادات الشركة"></canvas>
+            </div>
+        </div>
+
+        <div class="bg-transparent mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <h4 class="font-semibold text-gray-700">معرض لقطات لوحة التحكم</h4>
+                <div class="flex items-center gap-2">
+                    <button class="filterBtn px-3 py-1 border rounded-full text-sm" data-filter="all">الكل</button>
+                    <button class="filterBtn px-3 py-1 border rounded-full text-sm" data-filter="sales">مبيعات</button>
+                    <button class="filterBtn px-3 py-1 border rounded-full text-sm" data-filter="reports">تقارير</button>
+                    <button class="filterBtn px-3 py-1 border rounded-full text-sm" data-filter="orders">طلبات</button>
+                </div>
+            </div>
+
+            <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- سيتم ملؤها من الـ JS الثابت -->
+            </div>
+        </div>
+
+        <div id="shotModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center p-4 z-50">
+            <div class="bg-white rounded-xl max-w-4xl w-full overflow-hidden">
+                <div class="flex items-center justify-between p-3 border-b">
+                    <div>
+                        <h5 id="modalTitle" class="font-semibold text-lg text-gray-700"></h5>
+                        <div id="modalTime" class="text-xs text-gray-400"></div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button id="downloadShot" class="px-3 py-1 border rounded text-sm">تحميل</button>
+                        <button id="closeShot" class="text-gray-600 px-2">✕</button>
+                    </div>
+                </div>
+                <div class="p-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div class="lg:col-span-2">
+                        <img id="modalImg" src="" alt="صورة اللوحة" class="w-full h-96 object-contain bg-gray-50 p-4 rounded" />
+                    </div>
+                    <div>
+                        <h6 class="text-sm font-medium text-gray-700">ملاحظة سريعة</h6>
+                        <p id="modalNote" class="text-sm text-gray-500 mt-2"></p>
+
+                        <div class="mt-6">
+                            <h6 class="text-sm font-medium text-gray-700">إجراءات</h6>
+                            <div class="flex flex-col gap-2 mt-3">
+                                <button id="markImportant" class="px-3 py-2 bg-emerald-600 text-white rounded">وضع كـ هام</button>
+                                <button id="openInTab" class="px-3 py-2 border rounded">فتح في تبويب جديد</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--  -->
+
+    <!-- Contact / CTA -->
+    <section class="py-16 md:py-24" id="contact">
+        <div class="container max-w-5xl">
+            <div class="grid lg:grid-cols-2 gap-10 items-start">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-extrabold">جاهز نضع خطتك للـ 90 يوم القادمة؟</h2>
+                    <p class="mt-2 text-slate-600">املأ النموذج وسنتواصل خلال 24 ساعة عمل. أو اكتب لنا مباشرة على واتساب.</p>
+                    <a class="mt-4 inline-flex items-center gap-2 rounded-xl border px-4 py-2" href="https://wa.me/000000000000" target="_blank">
+                        <img alt="whatsapp" class="h-5 w-5" src="https://dummyimage.com/20x20/25D366/ffffff.png&amp;text=W" /> تواصل واتساب الآن
+                    </a>
+                    <div class="mt-6 rounded-2xl border p-4 bg-soft">
+                        <p class="text-sm text-slate-600">سياسة الخصوصية: لا نشارك بياناتك مع أي طرف. سنستخدمها فقط للتواصل حول استشارتك.</p>
+                    </div>
+                </div>
+                <form class="reveal rounded-2xl border p-6 shadow-soft bg-white space-y-4" onsubmit="event.preventDefault(); alert('تم إرسال الطلب – سنعود إليك خلال 24 ساعة عمل.'); this.reset();">
+                    <div>
+                        <label class="text-sm text-slate-600">الاسم الكامل</label>
+                        <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="مثال: محمد محمد" required="" type="text" />
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-sm text-slate-600">البريد الإلكتروني</label>
+                            <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="you@example.com" required="" type="email" />
+                        </div>
+                        <div>
+                            <label class="text-sm text-slate-600">رقم الجوال</label>
+                            <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="05xxxxxxxx" required="" type="tel" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-sm text-slate-600">إسم مشروعك</label>
+                        <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="https://yourstore.com" type="url" />
+                    </div>
+                    <div>
+                        <label class="text-sm text-slate-600">كيف نستطيع المساعدة؟</label>
+                        <textarea class="mt-1 w-full rounded-xl border-slate-300" placeholder="حدثنا عن مشروعك الحالي .." rows="4"></textarea>
+                    </div>
+                    <button class="w-full rounded-xl bg-primary px-6 py-3 text-white font-semibold hover:bg-primaryDark transition" type="submit">إحجز إستشارتك الآن</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
     <!-- System / Process -->
     <section class="py-16 md:py-24" id="system">
         <div class="container max-w-7xl">
@@ -172,7 +346,7 @@
                 <!-- Card 1 -->
                 <div class="reveal rounded-2xl border p-6 shadow-soft hover:-translate-y-1 transition">
                     <div class="h-10 w-10 rounded-lg bg-emerald-100 text-primary flex items-center justify-center">1</div>
-                    <h3 class="mt-4 font-bold text-xl">دراسة المتجر والمنتجات</h3>
+                    <h3 class="mt-4 font-bold text-xl">دراسة وتحليل المشروع</h3>
                     <p class="mt-2 text-slate-600">تحليل السوق، العملاء، الأسعار، وحدات الربح؛ والخروج بخريطة تحويل واضحة.</p>
                     <ul class="mt-3 space-y-1 text-sm text-slate-600 list-disc list-inside">
                         <li>تحديد ICP &amp; USP</li>
@@ -194,7 +368,7 @@
                 <!-- Card 3 -->
                 <div class="reveal rounded-2xl border p-6 shadow-soft hover:-translate-y-1 transition">
                     <div class="h-10 w-10 rounded-lg bg-emerald-100 text-primary flex items-center justify-center">3</div>
-                    <h3 class="mt-4 font-bold text-xl">البناء على المكتسبات</h3>
+                    <h3 class="mt-4 font-bold text-xl">البناء على النتائج والأرقام</h3>
                     <p class="mt-2 text-slate-600">اختبارات A/B، ضبط الميزانيات، وتوسيع العروض الرابحة على القنوات الأكثر ربحًا.</p>
                     <ul class="mt-3 space-y-1 text-sm text-slate-600 list-disc list-inside">
                         <li>Scaling تدريجي آمن</li>
@@ -273,8 +447,9 @@
                     <p class="mt-1 text-slate-600">GA4، بيكسلات، ولوحات Hub تُظهر ما يهم.</p>
                     <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
                         <li>لوحات أسبوعية</li>
-                        <li>Attribution متعدد القنوات</li>
                         <li>تنبيهات هامش الربح</li>
+                        <li>ربط سيرفر سايد وماكس بانل
+                        </li>
                     </ul>
                 </article>
             </div>
@@ -290,11 +465,11 @@
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="reveal rounded-2xl border p-6 text-center shadow-soft">
                     <div class="text-4xl font-extrabold text-primary">×12.1</div>
-                    <p class="mt-1 text-slate-600">ROAS موسم العيد – عطور</p>
+                    <p class="mt-1 text-slate-600">ROAS</p>
                 </div>
                 <div class="reveal rounded-2xl border p-6 text-center shadow-soft">
                     <div class="text-4xl font-extrabold text-primary">+540%</div>
-                    <p class="mt-1 text-slate-600">نمو مبيعات 3 أشهر – موضة</p>
+                    <p class="mt-1 text-slate-600">نمو مبيعات 3 أشهر</p>
                 </div>
                 <div class="reveal rounded-2xl border p-6 text-center shadow-soft">
                     <div class="text-4xl font-extrabold text-primary">-31%</div>
@@ -322,12 +497,13 @@
                     <a class="mt-6 inline-flex rounded-xl bg-primary px-5 py-3 text-white" href="#contact">ابدأ بخطة الـ 90 يومًا</a>
                 </div>
                 <div class="reveal rounded-2xl border bg-white p-6 shadow-soft">
-                    <img alt="ecommerce dashboard" class="w-full rounded-xl object-cover" src="https://picsum.photos/seed/ecom1/960/600" />
+                    <img alt="ecommerce dashboard" class="w-full rounded-xl object-cover" src="./assert/ques.jpg" />
                 </div>
             </div>
         </div>
     </section>
     <!-- Cases / Testimonials -->
+    <!-- Cases 
     <section class="py-16 md:py-24" id="cases">
         <div class="container max-w-7xl">
             <div class="flex items-end justify-between flex-wrap gap-4">
@@ -338,7 +514,6 @@
                 <a class="rounded-xl border px-4 py-2" href="#contact">أريد مثل هذه النتائج</a>
             </div>
             <div class="mt-8 grid md:grid-cols-3 gap-6">
-                <!-- Case card -->
                 <article class="reveal rounded-2xl border overflow-hidden bg-white shadow-soft">
                     <img alt="case" class="h-40 w-full object-cover" src="https://picsum.photos/seed/c1/960/600" />
                     <div class="p-6">
@@ -373,51 +548,58 @@
                     </div>
                 </article>
             </div>
-            <!-- Testimonials slider (simple) -->
-            <div class="mt-12">
-                <div id="sliderWrap" class="overflow-hidden rounded-2xl border bg-white shadow-soft">
-                    <div id="slider" class="flex will-change-transform transition-transform duration-500 ease-out">
-                        <!-- Slide 1 -->
-                        <figure class="w-full flex-none p-6 flex items-center gap-4">
-                            <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceB/80/80" />
-                            <blockquote class="text-slate-700">
-                                <p class="text-lg">"أفضل ما حصل هو وضوح الأرقام. لأول مرة نفهم أين نهدر الميزانية وكيف نضاعف الرابح."</p>
-                                <figcaption class="mt-2 text-sm text-slate-500">سارة – متجر مستلزمات منزلية</figcaption>
-                            </blockquote>
-                        </figure>
+            -->
 
-                        <!-- Slide 2 -->
-                        <figure class="w-full flex-none p-6 flex items-center gap-4">
-                            <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceC/80/80" />
-                            <blockquote class="text-slate-700">
-                                <p class="text-lg">"الشغل صار منظم: محتوى، إعلانات، وتقارير أسبوعية واضحة. شفنا نمو ثابت بدون مفاجآت."</p>
-                                <figcaption class="mt-2 text-sm text-slate-500">عبدالله – متجر إلكترونيات</figcaption>
-                            </blockquote>
-                        </figure>
 
-                        <!-- Slide 3 -->
-                        <figure class="w-full flex-none p-6 flex items-center gap-4">
-                            <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceD/80/80" />
-                            <blockquote class="text-slate-700">
-                                <p class="text-lg">"خطة 90 يوم خلت التنفيذ سهل والنتائج قابلة للقياس. CAC نزل وLTV ارتفع."</p>
-                                <figcaption class="mt-2 text-sm text-slate-500">ريم – متجر أزياء</figcaption>
-                            </blockquote>
-                        </figure>
-                    </div>
+    <!-- Testimonials slider (simple) -->
+    <!-- Container  -->
+    <div class="container max-w-7xl">
+        <div class="my-12">
+            <div id="sliderWrap" class="overflow-hidden rounded-2xl border bg-white shadow-soft">
+                <div id="slider" class="flex will-change-transform transition-transform duration-500 ease-out">
+                    <!-- Slide 1 -->
+                    <figure class="w-full flex-none p-6 flex items-center gap-4">
+                        <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceB/80/80" />
+                        <blockquote class="text-slate-700">
+                            <p class="text-lg mt-4">"أفضل ما حصل هو وضوح الأرقام. لأول مرة نفهم أين نهدر الميزانية وكيف نضاعف الرابح."</p>
+                            <figcaption class="mt-2 text-sm text-slate-500">سارة – متجر مستلزمات منزلية</figcaption>
+                        </blockquote>
+                    </figure>
 
-                    <!-- Dots -->
-                    <div class="flex items-center justify-center gap-3 p-4">
-                        <button class="dot h-2 w-6 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="1" aria-current="true"></button>
-                        <button class="dot h-2 w-2 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="2"></button>
-                        <button class="dot h-2 w-2 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="3"></button>
-                    </div>
+                    <!-- Slide 2 -->
+                    <figure class="w-full flex-none p-6 flex items-center gap-4">
+                        <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceC/80/80" />
+                        <blockquote class="text-slate-700">
+                            <p class="text-lg">"الشغل صار منظم: محتوى، إعلانات، وتقارير أسبوعية واضحة. شفنا نمو ثابت بدون مفاجآت."</p>
+                            <figcaption class="mt-2 text-sm text-slate-500">عبدالله – متجر إلكترونيات</figcaption>
+                        </blockquote>
+                    </figure>
+
+                    <!-- Slide 3 -->
+                    <figure class="w-full flex-none p-6 flex items-center gap-4">
+                        <img alt="client" class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/seed/faceD/80/80" />
+                        <blockquote class="text-slate-700">
+                            <p class="text-lg">"خطة 90 يوم خلت التنفيذ سهل والنتائج قابلة للقياس. CAC نزل وLTV ارتفع."</p>
+                            <figcaption class="mt-2 text-sm text-slate-500">ريم – متجر أزياء</figcaption>
+                        </blockquote>
+                    </figure>
                 </div>
 
+                <!-- Dots -->
+                <div class="flex items-center justify-center gap-3 p-4">
+                    <button class="dot h-2 w-6 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="1" aria-current="true"></button>
+                    <button class="dot h-2 w-2 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="2"></button>
+                    <button class="dot h-2 w-2 rounded-full bg-slate-300 aria-[current=true]:bg-primary" aria-label="3"></button>
+                </div>
             </div>
+
         </div>
+    </div>
     </section>
+
+
     <!-- Blog -->
-    <section class="py-16 md:py-24 bg-soft" id="blog">
+    <!-- <section class="py-16 md:py-24 bg-soft" id="blog">
         <div class="container max-w-7xl">
             <div class="text-center max-w-2xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-extrabold">من المدونة</h2>
@@ -450,49 +632,8 @@
                 </article>
             </div>
         </div>
-    </section>
-    <!-- Contact / CTA -->
-    <section class="py-16 md:py-24" id="contact">
-        <div class="container max-w-5xl">
-            <div class="grid lg:grid-cols-2 gap-10 items-start">
-                <div class="reveal">
-                    <h2 class="text-3xl md:text-4xl font-extrabold">جاهز نضع خطتك للـ 90 يوم القادمة؟</h2>
-                    <p class="mt-2 text-slate-600">املأ النموذج وسنتواصل خلال 24 ساعة عمل. أو اكتب لنا مباشرة على واتساب.</p>
-                    <a class="mt-4 inline-flex items-center gap-2 rounded-xl border px-4 py-2" href="https://wa.me/000000000000" target="_blank">
-                        <img alt="whatsapp" class="h-5 w-5" src="https://dummyimage.com/20x20/25D366/ffffff.png&amp;text=W" /> تواصل واتساب الآن
-                    </a>
-                    <div class="mt-6 rounded-2xl border p-4 bg-soft">
-                        <p class="text-sm text-slate-600">سياسة الخصوصية: لا نشارك بياناتك مع أي طرف. سنستخدمها فقط للتواصل حول استشارتك.</p>
-                    </div>
-                </div>
-                <form class="reveal rounded-2xl border p-6 shadow-soft bg-white space-y-4" onsubmit="event.preventDefault(); alert('تم إرسال الطلب – سنعود إليك خلال 24 ساعة عمل.'); this.reset();">
-                    <div>
-                        <label class="text-sm text-slate-600">الاسم الكامل</label>
-                        <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="مثال: محمد محمد" required="" type="text" />
-                    </div>
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="text-sm text-slate-600">البريد الإلكتروني</label>
-                            <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="you@example.com" required="" type="email" />
-                        </div>
-                        <div>
-                            <label class="text-sm text-slate-600">رقم الجوال</label>
-                            <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="05xxxxxxxx" required="" type="tel" />
-                        </div>
-                    </div>
-                    <div>
-                        <label class="text-sm text-slate-600">رابط متجرك (اختياري)</label>
-                        <input class="mt-1 w-full rounded-xl border-slate-300" placeholder="https://yourstore.com" type="url" />
-                    </div>
-                    <div>
-                        <label class="text-sm text-slate-600">كيف نستطيع المساعدة؟</label>
-                        <textarea class="mt-1 w-full rounded-xl border-slate-300" placeholder="احكِ لنا بإيجاز عن وضع متجرك الحالي" rows="4"></textarea>
-                    </div>
-                    <button class="w-full rounded-xl bg-primary px-6 py-3 text-white font-semibold hover:bg-primaryDark transition" type="submit">أرسل طلبي</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    </section> -->
+
     <!-- Footer -->
     <footer class="border-t border-slate-200 py-10">
         <div class="container max-w-7xl">
@@ -510,7 +651,7 @@
                         <li><a class="hover:text-primary" href="#services">الخدمات</a></li>
                         <li><a class="hover:text-primary" href="#system">منظومة التكامل</a></li>
                         <li><a class="hover:text-primary" href="#results">النتائج</a></li>
-                        <li><a class="hover:text-primary" href="#cases">قصص نجاح</a></li>
+                        <!-- <li><a class="hover:text-primary" href="#cases">قصص نجاح</a></li> -->
                     </ul>
                 </div>
                 <div>
@@ -539,6 +680,8 @@
         </div>
     </footer>
     <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./state.js"></script>
 
 
     <!-- START Scroll Progress (Bottom) -->

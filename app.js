@@ -213,16 +213,22 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     }
 
     // Dots
-    dots.forEach((d, i) => d.addEventListener('click', () => { stop();
+    dots.forEach((d, i) => d.addEventListener('click', () => {
+        stop();
         go(i);
-        start(); }));
+        start();
+    }));
 
     // Auto
-    function start() { stop();
-        autoTimer = setInterval(() => go(index + 1), 5000); }
+    function start() {
+        stop();
+        autoTimer = setInterval(() => go(index + 1), 5000);
+    }
 
-    function stop() { if (autoTimer) clearInterval(autoTimer);
-        autoTimer = null; }
+    function stop() {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = null;
+    }
 
     wrap.addEventListener('mouseenter', stop);
     wrap.addEventListener('mouseleave', start);
@@ -273,3 +279,97 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     const yEl = document.getElementById('year');
     if (yEl) yEl.textContent = new Date().getFullYear();
 })();
+
+
+
+
+// new section
+// بيانات الرسم
+const revenueData = {
+    labels: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+    datasets: [{
+        label: 'الإيرادات',
+        data: [1200, 1600, 1800, 2200, 2800, 2500, 3100, 3400, 3700, 4000, 4200, 4800],
+        tension: 0.4,
+        fill: true,
+        borderWidth: 3,
+        backgroundColor: 'rgba(16,185,129,0.08)',
+        borderColor: '#10B981',
+        pointRadius: 3
+    }]
+};
+
+let revenueChart;
+
+// تهيئة الرسم
+function initCharts() {
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    revenueChart = new Chart(ctx, {
+        type: 'line',
+        data: revenueData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+}
+
+// عداد رقمي متحرك
+function animateCounter(el, to) {
+    const duration = 1200;
+    const start = 0;
+    const startTime = performance.now();
+
+    function step(now) {
+        const t = Math.min((now - startTime) / duration, 1);
+        const eased = t * (2 - t);
+        const value = Math.floor(start + (to - start) * eased);
+        el.textContent = value.toLocaleString();
+        if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+}
+
+// الدائرة المتحركة والبار
+function animateProgress(percent) {
+    const circle = document.getElementById('svgProgress');
+    const full = 276.46;
+    const offset = full - (percent / 100) * full;
+    circle.style.transition = "stroke-dashoffset 1.4s ease";
+    circle.style.strokeDashoffset = offset;
+    document.querySelector('.js-svg-percent').textContent = percent + '%';
+    document.getElementById('barProgress').style.width = percent + '%';
+}
+
+// تفعيل عند ظهور السكشن
+const section = document.getElementById('stats');
+let activated = false;
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !activated) {
+            activated = true;
+            document.querySelectorAll('.js-counter').forEach(el => {
+                animateCounter(el, +el.dataset.target);
+            });
+            initCharts();
+            animateProgress(85);
+        }
+    });
+}, { threshold: 0.25 });
+
+observer.observe(section);
+
+// زر تحديث البيانات
+document.getElementById('refreshBtn').addEventListener('click', () => {
+    const newPercent = Math.floor(Math.random() * 90) + 5;
+    animateProgress(newPercent);
+    document.querySelectorAll('.js-counter').forEach(el => {
+        const newVal = Math.floor(Math.random() * 12000);
+        el.dataset.target = newVal;
+        animateCounter(el, newVal);
+    });
+    revenueChart.data.datasets[0].data = revenueChart.data.datasets[0].data.map(() => Math.floor(Math.random() * 5000) + 1000);
+    revenueChart.update();
+});

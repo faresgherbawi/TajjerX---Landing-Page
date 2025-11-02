@@ -172,6 +172,38 @@ body {
     /* يرجّع حجم خط داخل الشريحة لطبيعته */
 }
 
+
+/* new section */
+
+
+/* الخط الأساسي */
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+
+/* حركة البطاقات */
+
+.card {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+}
+
+
+/* الدائرة المتحركة */
+
+.progress-svg {
+    transform: rotate(90deg);
+}
+
+
+/* / */
+
 @media (prefers-reduced-motion: reduce) {
     #heroTitle span {
         transition: none !important;
